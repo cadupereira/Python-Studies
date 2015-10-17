@@ -1,0 +1,15 @@
+print ("Euler Project - Problem #2")
+a = 0
+b = 1 # B is equal to 1 to avoid one IF sentence on the Fibonicci formula
+c = 0
+d = 0
+e = 0
+limit = 4000000
+while e < limit:
+    c = b + a #Fibonacci
+    e = a + b + c #This formula is here to avoid C passing the limit
+    a = b
+    b = c
+    if c%2==0: #This is a filter to sum only the EVEN numbers
+        d = d + c
+print (d)
