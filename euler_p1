@@ -1,0 +1,17 @@
+print ("Euler Project - Problem #1")
+a,b,c,d,e,f = 0,0,0,0,0,0
+limit = 1000
+while a < limit:
+    if a%3 == 0:
+        b = b + a
+    a = a + 1
+while c < limit:
+    if c%5 == 0:
+        d = d + c
+    c = c + 1
+while e < limit:
+    if e%3 == 0:
+        if e%5 == 0:
+            f = f + e
+    e = e + 1
+print (b + d - f)
