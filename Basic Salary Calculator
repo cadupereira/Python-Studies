@@ -1,0 +1,32 @@
+print()
+print ("QUANTO VOCE VAI GANHAR ESSE MES?")
+print()
+
+horas_trabalhadas = input("Numero de horas trabalhadas:")
+valor_recebido_por_hora = input("Valor da hora trabalhada:")
+print()
+
+try:
+  horas_trabalhadas = float(horas_trabalhadas)
+  print ("Horas trabalhadas igual a",horas_trabalhadas, "horas")
+except:
+  print ("OPS! Encontramos um ERRO: entre um numero valido para horas trabalhadas")
+
+try:
+  valor_recebido_por_hora = float(valor_recebido_por_hora)
+  print ("Valor recebido por hora igual a R$",valor_recebido_por_hora, "por hora")
+except:
+  print ("OPS! Encontramos um ERRO: entre um numero valido para valor recebido por hora ")
+
+print ()
+
+def salario (horas, valor):
+  if horas <= 40:
+    money = horas * valor
+    print ("O seu salario ese mes sera de R$",money)
+  else:
+    money = ((horas - 40) * valor * 1.5) + 40*valor
+    print ("O seu salario esse mes sera de R$", money)
+
+salario (horas_trabalhadas, valor_recebido_por_hora)
+print()
