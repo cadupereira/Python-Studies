@@ -1,0 +1,46 @@
+print ("Calculadora para Arquitetos")
+print()
+cub = input("Valor do Cub: R$")
+
+quarto = 0.0
+sala = 0.0
+banheiro = 0.0
+
+ind_quarto = 0.068
+ind_sala = 0.072
+ind_banheiro = 0.119
+
+val_quarto = 0.0
+val_sala = 0.0
+val_banheiro = 0.0
+
+while True:
+  entrada = input("Escreva o nome do ambiente ('sala', 'quarto', 'banheiro') ou finalize escrevendo 'fim': ")
+  if entrada == "fim":
+    break
+  
+  if entrada == "sala":
+    val_sala = float(input("Qts m2 tem a sala?"))
+    sala = val_sala + sala
+    
+  if entrada == "quarto":
+    val_quarto = float(input("Qts m2 tem o quarto?"))
+    quarto = val_quarto + quarto
+    
+  if entrada == "banheiro":
+    val_banheiro = float(input("Qts m2 tem o banheiro?"))
+    banheiro = val_banheiro + banheiro
+
+print()
+  
+val_sala = float(sala)*float(ind_sala)*float(cub)
+if val_sala > 0:
+  print("Valor Sala: R$%.2f" % val_sala, " -> ", sala, "m2")
+val_quarto = float(quarto)*float(ind_quarto)*float(cub)
+if val_quarto > 0:
+  print("Valor Quarto: R$%.2f" % val_quarto, " -> ", quarto, "m2")
+val_banheiro = float(banheiro)*float(ind_banheiro)*float(cub)
+if val_banheiro > 0:
+  print("Valor Banheiro: R$%.2f"% val_banheiro, " -> ", banheiro, "m2")
+print()
+print("Valor Total: R$%.2f" % (float(val_sala)+float(val_quarto)+float(val_banheiro)), "-> ", sala+quarto+banheiro, "m2")
